@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A39D09C2757536E0022CB8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39D09A2757536E0022CB8B /* ViewController.swift */; };
 		3A39D09D2757536E0022CB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39D09B2757536E0022CB8B /* AppDelegate.swift */; };
-		5010BC04275E047C007F9C39 /* StorageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5010BC03275E047C007F9C39 /* StorageKit */; };
 		D94502FD261F98A500F6BF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94502FC261F98A500F6BF2E /* Assets.xcassets */; };
 		D945030C261F99CC00F6BF2E /* CurrencyKit in Frameworks */ = {isa = PBXBuildFile; productRef = D945030B261F99CC00F6BF2E /* CurrencyKit */; };
 /* End PBXBuildFile section */
@@ -17,7 +16,7 @@
 /* Begin PBXFileReference section */
 		3A39D09A2757536E0022CB8B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A39D09B2757536E0022CB8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D94502F5261F98A400F6BF2E /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94502F5261F98A400F6BF2E /* CurrencyKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CurrencyKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94502FC261F98A500F6BF2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9450301261F98A500F6BF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -28,7 +27,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D945030C261F99CC00F6BF2E /* CurrencyKit in Frameworks */,
-				5010BC04275E047C007F9C39 /* StorageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +45,7 @@
 		D94502F6261F98A400F6BF2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D94502F5261F98A400F6BF2E /* iOS Example.app */,
+				D94502F5261F98A400F6BF2E /* CurrencyKit Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,10 +86,9 @@
 			name = "iOS Example";
 			packageProductDependencies = (
 				D945030B261F99CC00F6BF2E /* CurrencyKit */,
-				5010BC03275E047C007F9C39 /* StorageKit */,
 			);
 			productName = "iOS Example";
-			productReference = D94502F5261F98A400F6BF2E /* iOS Example.app */;
+			productReference = D94502F5261F98A400F6BF2E /* CurrencyKit Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +116,6 @@
 			);
 			mainGroup = D94502EC261F98A400F6BF2E;
 			packageReferences = (
-				5010BC02275E047C007F9C39 /* XCRemoteSwiftPackageReference "StorageKit" */,
 			);
 			productRefGroup = D94502F6261F98A400F6BF2E /* Products */;
 			projectDirPath = "";
@@ -277,18 +273,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC4MCAXJ66;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.horizontalsystems.iOS-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.horizontalsystems.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "CurrencyKit Demo";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,17 +299,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC4MCAXJ66;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.horizontalsystems.iOS-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.horizontalsystems.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "CurrencyKit Demo";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -336,23 +340,7 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		5010BC02275E047C007F9C39 /* XCRemoteSwiftPackageReference "StorageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/horizontalsystems/StorageKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		5010BC03275E047C007F9C39 /* StorageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5010BC02275E047C007F9C39 /* XCRemoteSwiftPackageReference "StorageKit" */;
-			productName = StorageKit;
-		};
 		D945030B261F99CC00F6BF2E /* CurrencyKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CurrencyKit;
